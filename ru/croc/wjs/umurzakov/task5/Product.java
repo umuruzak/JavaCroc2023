@@ -128,7 +128,7 @@ public abstract class Product {
     @Override
     public String toString() {
         return "Характеристики товара:\n"
-                + "Опсиание: " + description + "\n"
+                + "Описание: " + description + "\n"
                 + (isImport() ? ("Страна производства: " + country + "\n") : "") // Страна и гарантия выводятся
                 + "Цена: " + price + "\n"                                        // только для импортных
                 + (isImport() ? ("Гарантия: " + warranty + "\n") : "")
