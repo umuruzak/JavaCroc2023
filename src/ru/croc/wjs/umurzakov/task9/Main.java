@@ -11,8 +11,20 @@ public class Main {
                 "Эта дыня на фотографии больше, чем в жизни(( Недоволен",
                 "Ваша методика -- обман!!",
                 "@Анатолий я в айти большую часть своей жизни, сам занимаюсь автоматизацией тестирования на Ява"));
+
+        System.out.println("Blacklist:");
+        for (String badWord : blacklist) {
+            System.out.print(badWord + " ");
+        }
+
+        System.out.println("\n\nКомментарии до использования фильтра:");
+        for (String comment : comments) {
+            System.out.println(comment);
+        }
+
         BLFImplementation filter = new BLFImplementation();
         filter.filterComments(comments, blacklist);
+        System.out.println("\nКомментарии после использования фильтра:");
         for (String str : comments) {
             System.out.println(str);
         }
